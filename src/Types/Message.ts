@@ -253,6 +253,8 @@ export type MediaGenerationOptions = {
 
     backgroundColor?: string
 
+    textArgb?: string
+
     font?: number
 }
 export type MessageContentGenerationOptions = MediaGenerationOptions & {

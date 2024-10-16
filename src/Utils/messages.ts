@@ -43,6 +43,7 @@ type MediaUploadData = {
 	height?: number
 	waveform?: Uint8Array
 	backgroundArgb?: number
+	textArgb?: number
 }
 
 const MIMETYPE_MAP: { [T in MediaType]?: string } = {
@@ -353,6 +354,10 @@ export const generateWAMessageContent = async(
 
 		if(options.backgroundColor) {
 			extContent.backgroundArgb = await assertColor(options.backgroundColor)
+		}
+
+		if(options.textColor) {
+			extContent.textArgb = await assertColor(options.textColor)
 		}
 
 		if(options.font) {

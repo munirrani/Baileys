@@ -229,6 +229,8 @@ export type MiscMessageGenerationOptions = MinimalRelayOptions & {
     statusJidList?: string[]
     /** backgroundcolor for status */
     backgroundColor?: string
+    /** textColor for status */
+    textColor?: string
     /** font type for status */
     font?: number
     /** if it is broadcast */
@@ -253,7 +255,7 @@ export type MediaGenerationOptions = {
 
     backgroundColor?: string
 
-    textArgb?: string
+    textColor?: string
 
     font?: number
 }
